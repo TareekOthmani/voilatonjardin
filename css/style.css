@@ -1,4 +1,6 @@
 /* Global properties ======================================================== */
+@import url("/css/bootstrap-grid.css");
+
 html, body {
 	width:100%;
 	padding:0;
@@ -438,4 +440,9 @@ dl dd a:hover {
 	width:82px;
 	color:#000;
 	line-height:20px;
+}
+.img-border img{
+	width: 100%;
+    height: 146px;
+    object-fit: cover;
 }
