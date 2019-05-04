@@ -1,260 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Art School | Contacts</title>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
-<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-<link rel="stylesheet" type="text/css" media="screen" href="css/grid_12.css">
-<link rel="stylesheet" type="text/css" media="screen" href="css/slider.css">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
-<script src="js/jquery-1.7.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/tms-0.4.1.js"></script>
-<script>
-$(document)
-    .ready(function () {
-    $('.slider')
-        ._TMS({
-        show: 0,
-        pauseOnHover: true,
-        prevBu: '.prev',
-        nextBu: '.next',
-        playBu: false,
-        duration: 800,
-        preset: 'fade',
-        pagination: true,
-        pagNums: false,
-        slideshow: 7000,
-        numStatus: false,
-        banners: false,
-        waitBannerAnimation: false,
-        progressBar: false
-    })
-});
-</script>
-<!--[if lt IE 9]>
+    <title>Art School | Contacts</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/grid_12.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/tms-0.4.1.js"></script>
+    <script>
+        $(document)
+            .ready(function () {
+                $('.slider')
+                    ._TMS({
+                        show: 0,
+                        pauseOnHover: true,
+                        prevBu: '.prev',
+                        nextBu: '.next',
+                        playBu: false,
+                        duration: 800,
+                        preset: 'fade',
+                        pagination: true,
+                        pagNums: false,
+                        slideshow: 7000,
+                        numStatus: false,
+                        banners: false,
+                        waitBannerAnimation: false,
+                        progressBar: false
+                    })
+            });
+    </script>
+    <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
 <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
 <![endif]-->
 </head>
+
 <body>
-<div class="main">
-  <!--==============================header=================================-->
-  <header>
-    <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
-    <nav>
-      <div id="slide">
-        <div class="slider">
-          <ul class="items">
-            <li><img src="images/slider-1.jpg" alt=""></li>
-            <li><img src="images/slider-2.jpg" alt=""></li>
-            <li><img src="images/slider-3.jpg" alt=""></li>
-          </ul>
-        </div>
-        <a href="#" class="prev"></a><a href="#" class="next"></a> </div>
-      <ul class="menu">
-        <li><a href="index.html" class="clr-1">Acceuil</a></li>
-        <li><a href="about.html" class="clr-2">A propos</a></li>
-        <li><a href="schedule.html" class="clr-3">Planning</a></li>
-        <li><a href="gallery.html" class="clr-4">Nos Clubs</a></li>
-        <li><a href="contacts.html" class="clr-5">Contacts</a></li>
-      </ul>
-    </nav>
-  </header>
-  <!--=====================formulaire====================================-->
-  <div class="container">    
-            
-        <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <div class="panel-title">Enregistrement</div>
-                    <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="/accounts/login/">Sign In</a></div>
-                </div>  
-                <div class="panel-body" >
-                    <form method="post" action=".">
-                        <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
-                                
-    
-                        <form  class="form-horizontal" method="post" >
-                            <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
-                            <div id="div_id_select" class="form-group required">
-                                <label for="id_select"  class="control-label col-md-4  requiredField"> Select<span class="asteriskField">*</span> </label>
-                                <div class="controls col-md-8 "  style="margin-bottom: 10px">
-                                    <label class="radio-inline"><input type="radio" checked="checked" name="select" id="id_select_1" value="S"  style="margin-bottom: 10px">Knowledge Seeker</label>
-                                    <label class="radio-inline"> <input type="radio" name="select" id="id_select_2" value="P"  style="margin-bottom: 10px">Knowledge Provider </label>
-                                </div>
-                            </div> 
-                            <div id="div_id_As" class="form-group required">
-                                <label for="id_As"  class="control-label col-md-4  requiredField">As<span class="asteriskField">*</span> </label>
-                                <div class="controls col-md-8 "  style="margin-bottom: 10px">
-                                    <label class="radio-inline"> <input type="radio" name="As" id="id_As_1" value="I"  style="margin-bottom: 10px">Individual </label>
-                                    <label class="radio-inline"> <input type="radio" name="As" id="id_As_2" value="CI"  style="margin-bottom: 10px">Company/Institute </label>
-                                </div>
-                            </div>
-                            <div id="div_id_username" class="form-group required">
-                                <label for="id_username" class="control-label col-md-4  requiredField"> Username<span class="asteriskField">*</span> </label>
-                                <div class="controls col-md-8 ">
-                                    <input class="input-md  textinput textInput form-control" id="id_username" maxlength="30" name="username" placeholder="Choose your username" style="margin-bottom: 10px" type="text" />
-                                </div>
-                            </div>
-                            <div id="div_id_email" class="form-group required">
-                                <label for="id_email" class="control-label col-md-4  requiredField"> E-mail<span class="asteriskField">*</span> </label>
-                                <div class="controls col-md-8 ">
-                                    <input class="input-md emailinput form-control" id="id_email" name="email" placeholder="Your current email address" style="margin-bottom: 10px" type="email" />
-                                </div>     
-                            </div>
-                            <div id="div_id_password1" class="form-group required">
-                                <label for="id_password1" class="control-label col-md-4  requiredField">Password<span class="asteriskField">*</span> </label>
-                                <div class="controls col-md-8 "> 
-                                    <input class="input-md textinput textInput form-control" id="id_password1" name="password1" placeholder="Create a password" style="margin-bottom: 10px" type="password" />
-                                </div>
-                            </div>
-                            <div id="div_id_password2" class="form-group required">
-                                 <label for="id_password2" class="control-label col-md-4  requiredField"> Re:password<span class="asteriskField">*</span> </label>
-                                 <div class="controls col-md-8 ">
-                                    <input class="input-md textinput textInput form-control" id="id_password2" name="password2" placeholder="Confirm your password" style="margin-bottom: 10px" type="password" />
-                                </div>
-                            </div>
-                            <div id="div_id_name" class="form-group required"> 
-                                <label for="id_name" class="control-label col-md-4  requiredField"> full name<span class="asteriskField">*</span> </label> 
-                                <div class="controls col-md-8 "> 
-                                    <input class="input-md textinput textInput form-control" id="id_name" name="name" placeholder="Your Frist name and Last name" style="margin-bottom: 10px" type="text" />
-                                </div>
-                            </div>
-                            <div id="div_id_gender" class="form-group required">
-                                <label for="id_gender"  class="control-label col-md-4  requiredField"> Gender<span class="asteriskField">*</span> </label>
-                                <div class="controls col-md-8 "  style="margin-bottom: 10px">
-                                     <label class="radio-inline"> <input type="radio" name="gender" id="id_gender_1" value="M"  style="margin-bottom: 10px">Male</label>
-                                     <label class="radio-inline"> <input type="radio" name="gender" id="id_gender_2" value="F"  style="margin-bottom: 10px">Female </label>
-                                </div>
-                            </div>
-                            <div id="div_id_company" class="form-group required"> 
-                                <label for="id_company" class="control-label col-md-4  requiredField"> company name<span class="asteriskField">*</span> </label>
-                                <div class="controls col-md-8 "> 
-                                     <input class="input-md textinput textInput form-control" id="id_company" name="company" placeholder="your company name" style="margin-bottom: 10px" type="text" />
-                                </div>
-                            </div> 
-                            <div id="div_id_catagory" class="form-group required">
-                                <label for="id_catagory" class="control-label col-md-4  requiredField"> catagory<span class="asteriskField">*</span> </label>
-                                <div class="controls col-md-8 "> 
-                                     <input class="input-md textinput textInput form-control" id="id_catagory" name="catagory" placeholder="skills catagory" style="margin-bottom: 10px" type="text" />
-                                </div>
-                            </div> 
-                            <div id="div_id_number" class="form-group required">
-                                 <label for="id_number" class="control-label col-md-4  requiredField"> contact number<span class="asteriskField">*</span> </label>
-                                 <div class="controls col-md-8 ">
-                                     <input class="input-md textinput textInput form-control" id="id_number" name="number" placeholder="provide your number" style="margin-bottom: 10px" type="text" />
-                                </div> 
-                            </div> 
-                            <div id="div_id_location" class="form-group required">
-                                <label for="id_location" class="control-label col-md-4  requiredField"> Your Location<span class="asteriskField">*</span> </label>
-                                <div class="controls col-md-8 ">
-                                    <input class="input-md textinput textInput form-control" id="id_location" name="location" placeholder="Your Pincode and City" style="margin-bottom: 10px" type="text" />
-                                </div> 
-                            </div>
-                            <div class="form-group">
-                                <div class="controls col-md-offset-4 col-md-8 ">
-                                    <div id="div_id_terms" class="checkbox required">
-                                        <label for="id_terms" class=" requiredField">
-                                             <input class="input-ms checkboxinput" id="id_terms" name="terms" style="margin-bottom: 10px" type="checkbox" />
-                                             Agree with the terms and conditions
-                                        </label>
-                                    </div> 
-                                        
-                                </div>
-                            </div> 
-                            <div class="form-group"> 
-                                <div class="aab controls col-md-4 "></div>
-                                <div class="controls col-md-8 ">
-                                    <input type="submit" name="Signup" value="Signup" class="btn btn-primary btn btn-info" id="submit-id-signup" />
-                                    or <input type="button" name="Signup" value="Sign Up with Facebook" class="btn btn btn-primary" id="button-id-signup" />
-                                </div>
-                            </div> 
-                                
-                        </form>
-    
-                    </form>
+    <div class="main">
+        <!--==============================header=================================-->
+        <header>
+            <h1><a href="index.html"><img style="
+            width: 250px;
+            object-fit: contain;
+            height: 140px;" src="images/club.png" alt=""></a></h1>
+            <nav>
+                <div id="slide">
+                    <div class="slider">
+                        <ul class="items">
+                            <li><img src="images/slider-1.jpg" alt=""></li>
+                            <li><img src="images/slider-2.jpg" alt=""></li>
+                            <li><img src="images/slider-3.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="prev"></a><a href="#" class="next"></a>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html" class="clr-1">Acceuil</a></li>
+                    <li><a href="about.html" class="clr-2">A propos</a></li>
+                    <li><a href="schedule.html" class="clr-3">Planning</a></li>
+                    <li><a href="gallery.html" class="clr-4">Nos Clubs</a></li>
+                    <li><a href="contacts.html" class="clr-5">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--=====================formulaire====================================-->
+        <div class="container">
+
+            <div id="signupbox" style=" margin-top:50px"
+                class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">Enregistrement</div>
+                        <div class="panel-body">
+                            <form method="post" action=".">
+                                <input type='hidden' name='csrfmiddlewaretoken'
+                                    value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+
+
+                                <form class="form-horizontal" method="post">
+                                    <input type='hidden' name='csrfmiddlewaretoken'
+                                        value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+                                    <div id="div_id_email" class="form-group required">
+                                        <label for="id_email" class="control-label col-md-4  requiredField"> E-mail<span
+                                                class="asteriskField">*</span> </label>
+                                        <div class="controls col-md-8 ">
+                                            <input class="input-md emailinput form-control" id="id_email" name="email"
+                                                placeholder="Your current email address" style="margin-bottom: 10px"
+                                                type="email" />
+                                        </div>
+                                    </div>
+                                    <div id="div_id_name" class="form-group required">
+                                        <label for="id_name" class="control-label col-md-4  requiredField">
+                                            Nom<span class="asteriskField">*</span> </label>
+                                        <div class="controls col-md-8 ">
+                                            <input class="input-md textinput textInput form-control" id="id_name"
+                                                name="name" placeholder="Nom" style="margin-bottom: 10px" type="text" />
+                                        </div>
+                                    </div>
+                                    <div id="div_id_name" class="form-group required">
+                                        <label for="id_name" class="control-label col-md-4  requiredField">
+                                            Prenom<span class="asteriskField">*</span> </label>
+                                        <div class="controls col-md-8 ">
+                                            <input class="input-md textinput textInput form-control" id="id_name"
+                                                name="name" placeholder="Prenom" style="margin-bottom: 10px"
+                                                type="text" />
+                                        </div>
+                                    </div>
+                                    <div id="div_id_name" class="form-group required">
+                                        <label for="id_name" class="control-label col-md-4  requiredField">
+                                            Prenom d'enfant<span class="asteriskField">*</span> </label>
+                                        <div class="controls col-md-8 ">
+                                            <input class="input-md textinput textInput form-control" id="id_name"
+                                                name="name" placeholder="Prenom de votre enfant"
+                                                style="margin-bottom: 10px" type="text" />
+                                        </div>
+                                    </div>
+                                    <div id="div_id_gender" class="form-group required">
+                                        <label for="id_gender" class="control-label col-md-4  requiredField">
+                                            Gender<span class="asteriskField">*</span> </label>
+                                        <div class="controls col-md-8 " style="margin-bottom: 10px">
+                                            <label class="radio-inline"> <input type="radio" name="gender"
+                                                    id="id_gender_1" value="M" style="margin-bottom: 10px">Male</label>
+                                            <label class="radio-inline"> <input type="radio" name="gender"
+                                                    id="id_gender_2" value="F" style="margin-bottom: 10px">Female
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div id="div_id_company" class="form-group required">
+                                        <label for="id_company" class="control-label col-md-4  requiredField">
+                                            Profession<span class="asteriskField">*</span> </label>
+                                        <div class="controls col-md-8 ">
+                                            <input class="input-md textinput textInput form-control" id="id_company"
+                                                name="company" placeholder="votre Profession"
+                                                style="margin-bottom: 10px" type="text" />
+                                        </div>
+                                    </div>
+                                    <div id="div_id_number" class="form-group required">
+                                        <label for="id_number" class="control-label col-md-4  requiredField">
+                                            Numero de tel<span class="asteriskField">*</span> </label>
+                                        <div class="controls col-md-8 ">
+                                            <input class="input-md textinput textInput form-control" id="id_number"
+                                                name="number" placeholder="donnez ton numéro"
+                                                style="margin-bottom: 10px" type="text" />
+                                        </div>
+                                    </div>
+                                    <div id="div_id_location" class="form-group required">
+                                        <label for="id_location" class="control-label col-md-4  requiredField">
+                                            Adresse<span class="asteriskField">*</span> </label>
+                                        <div class="controls col-md-8 ">
+                                            <input class="input-md textinput textInput form-control" id="id_location"
+                                                name="location" placeholder="votre code postal et votre ville"
+                                                style="margin-bottom: 10px" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="controls col-md-offset-4 col-md-8 ">
+                                            <div id="div_id_terms" class="checkbox required">
+                                                <label for="id_terms" class=" requiredField">
+                                                    <input class="input-ms checkboxinput" id="id_terms" name="terms"
+                                                        style="margin-bottom: 10px" type="checkbox" />
+                                                    Agree with the terms and conditions
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="aab controls col-md-4 "></div>
+                                        <div class="controls col-md-8 ">
+                                            <input type="submit" name="Signup" value="Enregistrer"
+                                                class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> 
-    </div>    
-     <!-------------------------footer-------------------------->
-     <footer>
-        </footer>
-      </div>
-      <div class="clear"></div>
+            <!-------------------------footer-------------------------->
+            <footer>
+            </footer>
+        </div>
+        <div class="clear"></div>
     </div>
-  </section>
-  </div>
- <footer class="footer-distributed bootstrap-wrapper">
+    </section>
+    </div>
+    <footer class="footer-distributed bootstrap-wrapper">
 
-			<div class="footer-left ">
+        <div class="footer-left ">
 
-				<a href="index.html"><img style="
+            <a href="index.html"><img style="
           width: 250px;
           object-fit: contain;
           height: 80px;
       " src="images/club.png" alt=""></a>
 
-				<p class="footer-links">
-					<a href="index.html" class="link-1">Acceuil</a>
-					
-					<a href="about.html">A propos</a>
-				
-					<a href="schedule.html">Planning</a>
-				
-					<a href="gallery.html">Nos Clubs</a>
-					
-					<a href="#">Faq</a>
-					
-					<a href="contacts.html">Contacts</a>
-				</p>
-        <p class="footer-company-name">© 2019 lebonclub</p>
-        <p>developper et designer par Zayneb et Mabrouka Anizi </p>
-			</div>
+            <p class="footer-links">
+                <a href="index.html" class="link-1">Acceuil</a>
 
-			<div class="footer-center">
+                <a href="about.html">A propos</a>
 
-				<div>
-					<i class="fa fa-map-marker"></i>
-					<p><span>
-            Rue salem bchir à coté de la salle de sport fit&fun derrière la gare de monastir
-            5000 Monastir</span> Centre ICI, Monastir</p>
-				</div>
+                <a href="schedule.html">Planning</a>
 
-				<div>
-					<i class="fa fa-phone"></i>
-					<p>+216 55 555 555</p>
-				</div>
+                <a href="gallery.html">Nos Clubs</a>
 
-				<div>
-					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@company.com">support@lebonclub.com</a></p>
-				</div>
+                <a href="#">Faq</a>
 
-			</div>
+                <a href="contacts.html">Contacts</a>
+            </p>
+            <p class="footer-company-name">© 2019 LeBonClub</p>
+            <p>developper et designer par Zayneb et Mabrouka Anizi </p>
+        </div>
 
-			<div class="footer-right">
+        <div class="footer-center">
 
-				<p class="footer-company-about">
-					<span>A propos</span>
-					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
-				</p>
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>
+                        Rue salem bchir à coté de la salle de sport fit&fun derrière la gare de monastir
+                        5000 Monastir</span> Centre ICI, Monastir</p>
+            </div>
 
-				<div class="footer-icons">
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+216 55 555 555</p>
+            </div>
 
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-github"></i></a>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">support@LeBonClub.com</a></p>
+            </div>
 
-				</div>
+        </div>
 
-			</div>
+        <div class="footer-right">
 
-		</footer>
+            <p class="footer-company-about">
+                <span>A propos</span>
+                Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
+                vehicula sit amet.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
 </body>
+
 </html>
