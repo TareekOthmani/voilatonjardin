@@ -619,3 +619,6 @@ dl {
 	}
 
 }
+.pic,.pic .mask > div{
+	background-size: cover!important;
+}
