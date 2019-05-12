@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "hamza";
-$password = "01131994";
+$username = "clubuser";
+$password = "tarek123";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=lebonclub", $username, $password);
@@ -24,6 +24,6 @@ catch(PDOException $e)
         $sql = "INSERT INTO inscri ( metadata, club_id) VALUES (?,?)";
         $stm=$conn->prepare($sql);
         $stm->execute([$data, $_POST['club']]);
-        header("Location: formulaire.html");
+        header("Location: index.html");
     }
 ?>
