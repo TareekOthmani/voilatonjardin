@@ -225,7 +225,7 @@
                             alt=""></a>
                         <p  class="text-1" style="color: #000;"><strong>'.$img['name'].' </strong></p>
         </div>
-        <div class
+        <p class="text-2">'.$img['aboo'].'</p>
 
 
       </div>
