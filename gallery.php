@@ -11,7 +11,6 @@
   <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
   <script src="js/jquery-1.7.min.js"></script>
   <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/uCarousel.js"></script>
   <script src="js/tms-0.4.1.js"></script>
   <script>
     $(document)
@@ -25,12 +24,7 @@
             playBu: '.play',
             duration: 700,
             preset: 'fade',
-            pagination: $('.img-pags')
-             .uCarousel({
-                show: 2,
-                shift: 0,
-                rows: 4
-              }),
+            pagination: true,
             pagNums: false,
             slideshow: 7000,
             numStatus: true,
