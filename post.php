@@ -24,6 +24,6 @@ catch(PDOException $e)
         $sql = "INSERT INTO inscri ( metadata, club_id) VALUES (?,?)";
         $stm=$conn->prepare($sql);
         $stm->execute([$data, $_POST['club']]);
-        header("Location: index.html");
+        header("Location:index.html");
     }
 ?>

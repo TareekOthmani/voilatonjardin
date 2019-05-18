@@ -329,7 +329,7 @@ ul.menu li:hover a, ul.menu li.current a {
 	border-top:#d6d6d6 1px solid;
 }
 .table tr th {
-	width:145px;
+	width:100px;
 	text-align:left;
 	font-weight:bold;
 	padding-bottom:13px;
@@ -656,3 +656,20 @@ dl {
   opacity: 1;
   transform: scale(1);
 }
+
+.button {
+	position: relative;
+	background-color: #1c87c9;
+	border: none;
+	color: white;
+	padding: 12px 48px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin-left: 4px 2px;
+	cursor: pointer;
+	float: right;
+	}
+
+	

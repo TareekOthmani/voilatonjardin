@@ -172,7 +172,6 @@
         <a href="contacts.html">Contacts</a>
       </p>
       <p class="footer-company-name">© 2019 LeBonClub</p>
-      <p>developper et designer par Zayneb et Mabrouka Anizi </p>
     </div>
 
     <div class="footer-center">
@@ -200,8 +199,8 @@
 
       <p class="footer-company-about">
         <span>A propos</span>
-        Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
-        vehicula sit amet.
+        LeBonClub est un web platform qui vise a aider nos citoyens de trouver la bonne club
+              d'enfant qui repond a leurs besoins
       </p>
 
       <div class="footer-icons">
@@ -221,11 +220,36 @@
   foreach($imgs as $index=>$img)
   echo '<div class="modal" id="modal'.($index+1).'">
       <div class="modal_inner">
-        <div class="  col-md-6"> <a class="img-border"><img src='.$img['ims'].'
+        <div class="  col-md-12"> <a class="img-border"><img src='.$img['ims'].'
                             alt=""></a>
                         <p  class="text-1" style="color: #000;"><strong>'.$img['name'].' </strong></p>
         </div>
         <p class="text-2">'.$img['aboo'].'</p>
+
+        <h2 class="clr-6 p6">Schedule</h2>
+        <table class="table" style="width: 480px;">
+          <tr>
+            <th>horaire</th>
+            <th>de lundi au vendredi</th>
+            <th>samedi</th>
+            <th class="last">dimanche</th>
+          </tr>
+          <tr>
+            <td><span>ouverture</span></td>
+            <td><span>07:30</span></td>
+            <td><span>07:30</span></td>
+            <td><span>jour de congé</span></td>
+          </tr>
+          <tr>
+            <td><span>fermeture</span></td>
+            <td><span>17:30</span></td>
+            <td><span>13:30</span></td>
+            <td><span>jour de congé</span></td>
+          </tr>
+        </table>
+
+        <a href="formulaire.html" class="button">S\'inscrire</a>
+
 
 
       </div>
