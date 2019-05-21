@@ -1,7 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "clubuser";
-$password = "tarek123";
+include_once "config.php";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=lebonclub", $username, $password);
