@@ -90,9 +90,16 @@
                                                 class="asteriskField">*</span> </label>
                                         <div class="controls col-md-8 ">
                                             <select name="club" class="form-control">
-                                                <option value="0">Club 1</option>
-                                                <option value="1">Club 2</option>
-                                                <option value="2">Club 3</option>
+                                                <option>select club</option>
+                                                <?php
+                                                $clubs=[["name"=>"1","id"=>"0"],
+                                                ["name"=>"2","id"=>"1"]];
+                                                foreach($clubs as $club)
+                                                {
+                                                    $selected=(isset($_GET['club'])&&$_GET['club']==$club['id'])?'selected':'';
+                                                    echo '<option '.$selected.' value="'.$club['id'].'">'.$club['name'].'</option>';
+                                                }
+                                                ?>
                                             </select>
 
                                         </div>

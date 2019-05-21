@@ -248,7 +248,7 @@
           </tr>
         </table>
 
-        <a href="formulaire.html" class="button">S\'inscrire</a>
+        <a href="formulaire.php?club='.$index.'" class="button">S\'inscrire</a>
 
 
 
