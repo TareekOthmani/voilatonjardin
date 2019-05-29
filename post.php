@@ -1,16 +1,6 @@
 <?php
-include_once "config.php";
+include_once "connect.php";
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=lebonclub", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // echo "Connected successfully"; 
-    }
-catch(PDOException $e)
-    {
-    echo "Connection failed: " . $e->getMessage();
-    }
     function data($data,$inputs){
         $arr=[];
         foreach($inputs as $input )

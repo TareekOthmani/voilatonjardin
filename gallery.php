@@ -1,3 +1,9 @@
+<?php
+include_once "connect.php";
+$stm = $conn->prepare("select * from gallery ");
+$stm->execute();
+$data = $stm->fetchAll();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +20,7 @@
   <script src="js/tms-0.4.1.js"></script>
   <script>
     $(document)
-      .ready(function () {
+      .ready(function() {
         $('.gallery')
           ._TMS({
             show: 0,
@@ -32,11 +38,11 @@
             waitBannerAnimation: false,
             progressBar: false
           })
-        $(".img-border[data-target]").click(function () {
+        $(".img-border[data-target]").click(function() {
           $("#" + this.dataset.target).toggleClass("-open")
         })
 
-        $(".modal").click(function (e) {
+        $(".modal").click(function(e) {
           if (e.target === this) {
             $(this).toggleClass("-open")
           }
@@ -104,31 +110,12 @@
                 <div class="img-pags">
                   <div class="block-1 bootstrap-wrapper">
                     <div class="block-1-shadow row ">
-                    <?php
-                  $abo1="efzrgtehjigbfkqjnef,mrgzothjpgunlqfqemkgroetijo";
-                  $abo2="efzrgtehjigbfkqjnef,mrgzothjpgunlqfqemkgroetijo";
-                  $abo3="efzrgtehjigbfkqjnef,mrgzothjpgunlqfqemkgroetijo";
-                  $abo4="efzrgtehjigbfkqjnef,mrgzothjpgunlqfqemkgroetijo";
-                  $abo5="efzrgtehjigbfkqjnef,mrgzothjpgunlqfqemkgroetijo";
-                  $abo6="efzrgtehjigbfkqjnef,mrgzothjpgunlqfqemkgroetijo";
-                  $abo7="efzrgtehjigbfkqjnef,mrgzothjpgunlqfqemkgroetijo";
-                  $abo8="efzrgtehjigbfkqjnef,mrgzothjpgunlqfqemkgroetijo";
-                  $imgs=[
-                  ["name"=>"Club X1","ims"=>"images/act1.jpeg","aboo"=>$abo1],
-                  ["name"=>"Club X2","ims"=>"images/act2.jpg","aboo"=>$abo2],
-                  ["name"=>"Club X3","ims"=>"images/act3.jpg","aboo"=>$abo3],
-                  ["name"=>"Club X4","ims"=>"images/act4.jpg","aboo"=>$abo4],
-                  ["name"=>"Club X5","ims"=>"images/act1.jpeg","aboo"=>$abo5],
-                  ["name"=>"Club X6","ims"=>"images/act2.jpg","aboo"=>$abo6],
-                  ["name"=>"Club X7","ims"=>"images/act3.jpg","aboo"=>$abo7],
-                  ["name"=>"Club X8","ims"=>"images/act4.jpg","aboo"=>$abo8]
-                ];
-                  foreach($imgs as $index=>$img)
-                  echo '<div class=" col-md-6">
-                          
-                  <a class="img-border" data-target="modal'.($index+1).'"><img src='.$img['ims'].' alt=""></a>
-                  <p class="text-2">'.$img['name'].'</p>
-                </div>';?>
+                      <?php
+                      foreach ($data as $index => $club)
+                        echo '<div class=" col-md-6">
+                                <a class="img-border" data-target="modal' . ($index + 1) . '"><img src=' . $club['img'] . ' alt=""></a>
+                                <p class="text-2">' . $club['name'] . '</p>
+                              </div>'; ?>
                       <div class="clear"></div>
                       <div class="pad-2" style="
                         display: block;
@@ -200,7 +187,7 @@
       <p class="footer-company-about">
         <span>A propos</span>
         LeBonClub est un web platform qui vise a aider nos citoyens de trouver la bonne club
-              d'enfant qui repond a leurs besoins
+        d'enfant qui repond a leurs besoins
       </p>
 
       <div class="footer-icons">
@@ -216,15 +203,15 @@
 
   </footer>
   <?php
-  
-  foreach($imgs as $index=>$img)
-  echo '<div class="modal" id="modal'.($index+1).'">
+
+  foreach ($data as $index => $club)
+    echo '<div class="modal" id="modal' . ($index + 1) . '">
       <div class="modal_inner">
-        <div class="  col-md-12"> <a class="img-border"><img src='.$img['ims'].'
+        <div class="  col-md-12"> <a class="img-border"><img src=' . $club['img'] . '
                             alt=""></a>
-                        <p  class="text-1" style="color: #000;"><strong>'.$img['name'].' </strong></p>
+                        <p  class="text-1" style="color: #000;"><strong>' . $club['name'] . ' </strong></p>
         </div>
-        <p class="text-2">'.$img['aboo'].'</p>
+        <p class="text-2">' . $club['detail'] . '</p>
 
         <h2 class="clr-6 p6">Schedule</h2>
         <table class="table" style="width: 480px;">
@@ -236,19 +223,19 @@
           </tr>
           <tr>
             <td><span>ouverture</span></td>
-            <td><span>07:30</span></td>
-            <td><span>07:30</span></td>
-            <td><span>jour de congé</span></td>
+            <td><span>'.$club['monday_friday_open_hour'].'</span></td>
+            <td><span>'.$club['saturday_open_hour'].'</span></td>
+            <td><span>'.($club['sunday_open_hour']=="close"?'jour de congé':$club['sunday_open_hour']).'</span></td>
           </tr>
           <tr>
             <td><span>fermeture</span></td>
-            <td><span>17:30</span></td>
-            <td><span>13:30</span></td>
-            <td><span>jour de congé</span></td>
+            <td><span>'.$club['monday_friday_close_hour'].'</span></td>
+            <td><span>'.$club['saturday_close_hour'].'</span></td>
+            <td><span>'.($club['sunday_close_hour']=="close"?'jour de congé':$club['sunday_close_hour']).'</span></td>
           </tr>
         </table>
 
-        <a href="formulaire.php?club='.$index.'" class="button">S\'inscrire</a>
+        <a href="formulaire.php?club=' . $club['id'] . '" class="button">S\'inscrire</a>
 
 
 
