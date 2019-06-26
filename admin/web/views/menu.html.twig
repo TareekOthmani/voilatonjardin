@@ -2,6 +2,18 @@
 
 {% block menu %}
 
+<li class="treeview {% if option is defined and (option == 'gallery_list' or option == 'gallery_create' or option == 'gallery_edit') %}active{% endif %}">
+    <a href="#">
+        <i class="fa fa-folder-o"></i>
+        <span>gallery</span>
+        <i class="fa pull-right fa-angle-right"></i>
+    </a>
+    <ul class="treeview-menu" style="display: none;">
+        <li {% if option is defined and option == 'gallery_list' %}class="active"{% endif %}><a href="{{ path('gallery_list') }}" style="margin-left: 10px;"><i class="fa fa-angle-double-right"></i> List</a></li>
+        <li {% if option is defined and option == 'gallery_create' %}class="active"{% endif %}><a href="{{ path('gallery_create') }}" style="margin-left: 10px;"><i class="fa fa-angle-double-right"></i> Create</a></li>
+    </ul>
+</li>
+
 <li class="treeview {% if option is defined and (option == 'inscri_list' or option == 'inscri_create' or option == 'inscri_edit') %}active{% endif %}">
     <a href="#">
         <i class="fa fa-folder-o"></i>

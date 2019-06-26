@@ -60,9 +60,9 @@ $data = $stm->fetchAll();
     <!--==============================header=================================-->
     <header>
       <h1><a href="index.html"><img style="
-        width: 250px;
+        width: 280px;
         object-fit: contain;
-        height: 140px;" src="images/club.png" alt=""></a></h1>
+        height: 160px;" src="images/club.png" alt=""></a></h1>
       <nav>
         <div id="slide">
           <div class="gallery">
@@ -95,11 +95,7 @@ $data = $stm->fetchAll();
         <div class="grid_4 bot-1">
           <h2 class="top-6 p2">Categories</h2>
           <ul class="list-1">
-            <li><a href="#">Dessin</a></li>
-            <li><a href="#">Dance</a></li>
-            <li><a href="#">Musique</a></li>
-            <li><a href="#">Loisirs</a></li>
-            <li><a href="#">Autres</a></li>
+          <p class="text-1 p3">robotique, peinture, cuisine, couture, théâtre, Diy, médecine, lecture, Art, Cinéma, Radio, start_up, électronique, musique, ...</p>
           </ul>
         </div>
         <div class="grid_8">
@@ -211,9 +207,12 @@ $data = $stm->fetchAll();
                             alt=""></a>
                         <p  class="text-1" style="color: #000;"><strong>' . $club['name'] . ' </strong></p>
         </div>
+        <p class="text-2"><strong>type de club: </strong>'.$club['club_type'].' </p>
+        <p class="text-2"><strong>A propos</strong></p>
         <p class="text-2">' . $club['detail'] . '</p>
+        <p class="text-2"><strong>nombre d\'Éducateurs : </strong> '.$club['effectif'].' </p>
 
-        <h2 class="clr-6 p6">Schedule</h2>
+        <h2 class="clr-6 p6">Horaire</h2>
         <table class="table" style="width: 480px;">
           <tr>
             <th>horaire</th>
@@ -234,6 +233,8 @@ $data = $stm->fetchAll();
             <td><span>'.($club['sunday_close_hour']=="close"?'jour de congé':$club['sunday_close_hour']).'</span></td>
           </tr>
         </table>
+        <p class="text-2"><strong>adresse : </strong></p>
+        <p class="text-2"> '.$club['adress'].' </p>
 
         <a href="formulaire.php?club=' . $club['id'] . '" class="button">S\'inscrire</a>
 

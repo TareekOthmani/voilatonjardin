@@ -28,86 +28,51 @@ SET time_zone = "+00:00";
 -- Table structure for table `gallery`
 --
 
+DROP TABLE IF EXISTS `gallery`;
 CREATE TABLE `gallery` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `img` text NOT NULL,
-  `detail` text NOT NULL,
+  `club_type` text CHARACTER SET utf8 NOT NULL,
+  `detail` text CHARACTER SET utf8 NOT NULL,
+  `effectif` int(11) NOT NULL,
   `monday_friday_open_hour` varchar(10) NOT NULL,
   `saturday_open_hour` varchar(10) NOT NULL,
   `sunday_open_hour` varchar(10) NOT NULL,
   `monday_friday_close_hour` varchar(10) NOT NULL,
   `saturday_close_hour` varchar(10) NOT NULL,
-  `sunday_close_hour` varchar(10) NOT NULL
+  `sunday_close_hour` varchar(10) NOT NULL,
+  `adress` text CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `gallery`
---
+INSERT INTO `gallery` (`id`, `name`, `img`, `club_type`, `detail`, `effectif`, `monday_friday_open_hour`, `saturday_open_hour`, `sunday_open_hour`, `monday_friday_close_hour`, `saturday_close_hour`, `sunday_close_hour`, `adress`) VALUES
+(1,	'Hannibal kids',	'images/han_kids.jpg',	'Loisirs',	'club d\'enfant \"Hannibal kids\" etait crée depuis 2002, il est connu par son organisation aisni que leur discipline  ',	6,	'07:30',	'07:30',	'close',	'17:30',	'13:30',	'close',	'monastir,5000'),
+(2,	'Tarkiz',	'images/tarkiz.jpg',	'Autres',	'Il s\'agit du premier club interactif interactif pour enfants développé par Mme Khadija Obaidi, titulaire du certificat de propriété intellectuelle en République tunisienne.',	7,	'07:30',	'07:30',	'close',	'17:30',	'13:30',	'close',	'monastir,5000'),
+(3,	'Corniche Club Enfants',	'images/corniche.jpg',	'dessin,loisirs',	'Corniche Club Enfants est un club trés connu par ses differents activités durant toute l\'année ainsi que ses Prix.',	7,	'07:30',	'07:30',	'close',	'17:30',	'13:30',	'close',	'Avenue de la Corniche, Monastir 5000'),
+(4,	'Brico KID',	'images/briko_kid.jpg',	'robotique, peinture, cuisine, couture, théâtre, Diy, médecine, lecture, Art, Cinéma, Radio, start_up, électronique',	'BRICO KID offre plusieurs activités  : bricolage, science, technologie, jardinage, lecture, sortie, journalisme ...\r\nCes activités ont pour objectif de transmettre aux enfants des savoirs, de connaissances, de dialogue, de culture et de traditions....',	10,	'07:30',	'07:30',	'close',	'17:30',	'13:30',	'close',	'R4 devant Spring Land'),
+(5,	'Club d\'enfant',	'images/act1.jpeg',	'',	'Lorem ipsum dolor sit amet, ex mea eius velit consequat',	5,	'07:30',	'07:30',	'close',	'17:30',	'13:30',	'close',	'stah jabeur monastir'),
+(6,	'Club d\'enfant',	'images/act2.jpg',	'',	'Lorem ipsum dolor sit amet, ex mea eius velit consequat',	0,	'07:30',	'07:30',	'close',	'17:30',	'13:30',	'close',	'stah jabeur monastir'),
+(7,	'Club d\'enfant',	'images/act3.jpg',	'',	'Lorem ipsum dolor sit amet, ex mea eius velit consequat',	5,	'07:30',	'07:30',	'close',	'17:30',	'13:30',	'close',	'\r\n'),
+(8,	'Club d\'enfant',	'images/act4.jpg',	'',	'Lorem ipsum dolor sit amet, ex mea eius velit consequat',	5,	'07:30',	'07:30',	'close',	'17:30',	'13:30',	'close',	'');
 
-INSERT INTO `gallery` (`id`, `name`, `img`, `detail`, `monday_friday_open_hour`, `saturday_open_hour`, `sunday_open_hour`, `monday_friday_close_hour`, `saturday_close_hour`, `sunday_close_hour`) VALUES
-(1, 'Club X1', 'images/act1.jpeg', 'Lorem ipsum dolor sit amet, ex mea eius velit consequat', '07:30', '07:30', 'close', '17:30', '13:30', 'close'),
-(2, 'Club X1', 'images/act1.jpeg', 'Lorem ipsum dolor sit amet, ex mea eius velit consequat', '07:30', '07:30', 'close', '17:30', '13:30', 'close'),
-(3, 'Club X1', 'images/act1.jpeg', 'Lorem ipsum dolor sit amet, ex mea eius velit consequat', '07:30', '07:30', 'close', '17:30', '13:30', 'close'),
-(4, 'Club X1', 'images/act1.jpeg', 'Lorem ipsum dolor sit amet, ex mea eius velit consequat', '07:30', '07:30', 'close', '17:30', '13:30', 'close'),
-(5, 'Club X1', 'images/act1.jpeg', 'Lorem ipsum dolor sit amet, ex mea eius velit consequat', '07:30', '07:30', 'close', '17:30', '13:30', 'close'),
-(6, 'Club X1', 'images/act1.jpeg', 'Lorem ipsum dolor sit amet, ex mea eius velit consequat', '07:30', '07:30', 'close', '17:30', '13:30', 'close'),
-(7, 'Club X1', 'images/act1.jpeg', 'Lorem ipsum dolor sit amet, ex mea eius velit consequat', '07:30', '07:30', 'close', '17:30', '13:30', 'close'),
-(8, 'Club X1', 'images/act1.jpeg', 'Lorem ipsum dolor sit amet, ex mea eius velit consequat', '07:30', '07:30', 'close', '17:30', '13:30', 'close');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `inscri`
---
-
+DROP TABLE IF EXISTS `inscri`;
 CREATE TABLE `inscri` (
-  `id` int(8) NOT NULL,
+  `id` int(8) NOT NULL AUTO_INCREMENT,
   `metadata` json NOT NULL,
-  `club_id` int(8) NOT NULL
+  `club_id` int(8) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `inscri`
---
 
 INSERT INTO `inscri` (`id`, `metadata`, `club_id`) VALUES
-(2, '{\"gender\": \"M\", \"number\": \"\", \"location\": \"rue roda nb 107\", \"name_last\": \"hamza\", \"name_child\": \"mohamed amine hamza\", \"name_first\": \"mohamed\", \"profession\": \"\"}', 2),
-(3, '{\"gender\": \"M\", \"number\": \"\", \"location\": \"rue roda nb 107\", \"name_last\": \"hamza\", \"name_child\": \"mohamed amine hamza\", \"name_first\": \"mohamed\", \"profession\": \"\"}', 1);
+(1,	'{\"gender\": \"M\", \"number\": \"fzrgte\", \"location\": \"stah jabeur monastir\", \"name_last\": \"fezrget\", \"name_child\": \"fezrge\", \"name_first\": \"czrget\", \"profession\": \"ferziiit\"}',	0),
+(2,	'{\"gender\": \"F\", \"number\": \"52962842\", \"location\": \"stah jabeur monastir\", \"name_last\": \"efrgteh\", \"name_child\": \"fezrge\", \"name_first\": \"dferzgteh\", \"profession\": \"fzrget\"}',	0),
+(3,	'{\"gender\": \"M\", \"number\": \"52962842\", \"location\": \"stah jabeur monastir\", \"name_last\": \"efrgteh\", \"name_child\": \"fegrztehyr\", \"name_first\": \"dferzgteh\", \"profession\": \"fzrget\"}',	0),
+(4,	'{\"gender\": \"M\", \"number\": \"52962842\", \"location\": \"stah jabeur monastir\", \"name_last\": \"efrgteh\", \"name_child\": \"fegrztehyr\", \"name_first\": \"dferzgteh\", \"profession\": \"fzrget\"}',	0),
+(5,	'{\"gender\": \"M\", \"number\": \"52962842\", \"location\": \"stah jabeur monastir\", \"name_last\": \"efrgteh\", \"name_child\": \"fegrztehyr\", \"name_first\": \"czrget\", \"profession\": \"fzrget\"}',	1),
+(6,	'{\"gender\": \"M\", \"number\": \"52962842\", \"location\": \"stah jabeur monastir\", \"name_last\": \"efrgteh\", \"name_child\": \"fezrge\", \"name_first\": \"dferzgteh\", \"profession\": \"fzrget\"}',	1),
+(7,	'{\"gender\": \"M\", \"number\": \"52962842\", \"location\": \"stah jabeur monastir\", \"name_last\": \"fezrget\", \"name_child\": \"fegrztehyr\", \"name_first\": \"dferzgteh\", \"profession\": \"fzrget\"}',	0),
+(8,	'{\"gender\": \"M\", \"number\": \"52962842\", \"location\": \"stah jabeur monastir\", \"name_last\": \"fezrget\", \"name_child\": \"fegrztehyr\", \"name_first\": \"dferzgteh\", \"profession\": \"fzrget\"}',	0),
+(10,	'{\"gender\": \"M\", \"number\": \"52962842\", \"location\": \"stah jabeur monastir\", \"name_last\": \"fezrget\", \"name_child\": \"fezrge\", \"name_first\": \"dferzgteh\", \"profession\": \"fzrget\"}',	1);
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `gallery`
---
-ALTER TABLE `gallery`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `inscri`
---
-ALTER TABLE `inscri`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `gallery`
---
-ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `inscri`
---
-ALTER TABLE `inscri`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- 2019-06-11 21:09:25

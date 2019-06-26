@@ -1,5 +1,6 @@
 <?php
-include "../../config.php";
+
+include "/home/tarek/Desktop/web/voilatonjardin/config.php";
 /*
  * This file is part of the CRUD Admin Generator project.
  *
